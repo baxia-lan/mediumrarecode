@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>medium rare code - single link</title>
+    <meta
+      name="description"
+      content="medium rare code 单曲的全平台分享链接。"
+    >
+    <meta property="og:title" content="medium rare code - single link">
+    <meta
+      property="og:description"
+      content="在你常用的音乐平台打开这首 medium rare code 单曲。"
+    >
+    <meta property="og:type" content="music.song">
+    <meta property="og:image" content="assets/medium-rare-code-banner.jpeg">
+    <link rel="stylesheet" href="styles.css">
+    <script src="site-data.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body data-page="single">
+    <header class="site-header" aria-label="主导航">
+      <a class="brand-mark" href="./index.html" aria-label="medium rare code 首页">
+        <span class="brand-pixel" aria-hidden="true"></span>
+        <span>medium rare code</span>
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="./index.html#releases">作品</a>
+        <a href="./index.html#listen">平台</a>
+        <a href="./index.html">首页</a>
+      </nav>
+    </header>
+
+    <main class="song-page single-page">
+      <section class="song-hero" aria-labelledby="song-title">
+        <div class="song-art" aria-hidden="true"></div>
+        <div class="song-copy">
+          <p class="eyebrow" id="song-type">单曲</p>
+          <h1 id="song-title">medium rare code</h1>
+          <p class="song-meta" id="song-meta"></p>
+          <a class="single-release-link" id="single-release-link" href="./song.html">
+            收录于专辑
+          </a>
+          <p class="song-description" id="song-description"></p>
+          <div class="song-actions">
+            <button class="button button-ghost" id="copy-share-link" type="button">
+              复制分享链接
+            </button>
+          </div>
+          <p class="share-url" id="share-url"></p>
+        </div>
+      </section>
+
+      <section class="section song-links-section" aria-labelledby="platform-title">
+        <div class="section-heading">
+          <p class="eyebrow">全平台</p>
+          <h2 id="platform-title">选择平台播放这首歌。</h2>
+        </div>
+        <div class="platform-grid" id="song-links"></div>
+      </section>
+
+      <section class="section more-releases" aria-labelledby="more-title">
+        <div class="section-heading">
+          <p class="eyebrow">继续听</p>
+          <h2 id="more-title">更多单曲。</h2>
+        </div>
+        <div class="single-grid" id="more-releases-grid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>medium rare code</span>
+      <span id="footer-year"></span>
+    </footer>
+  </body>
+</html>
