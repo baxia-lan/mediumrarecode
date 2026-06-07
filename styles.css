@@ -541,8 +541,16 @@ button.button {
   overflow-wrap: anywhere;
 }
 
-.song-meta {
+.song-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
   margin: 22px 0 0;
+}
+
+.song-meta {
+  margin: 0;
   color: var(--cyan);
   font-size: 0.88rem;
   font-weight: 800;
@@ -647,16 +655,11 @@ button.button {
   margin: 0;
 }
 
-.release-track-panel .share-button {
-  flex: 0 0 auto;
-}
-
 .single-page .song-copy h1 {
   font-size: 4.1rem;
 }
 
-.single-release-link,
-.share-button {
+.single-release-link {
   min-height: 40px;
   padding: 10px 12px;
   font-size: 0.8rem;
@@ -683,22 +686,29 @@ button.button {
 }
 
 .share-button {
-  gap: 8px;
+  gap: 6px;
+  min-height: 30px;
+  padding: 6px 9px;
+  border-color: rgba(31, 248, 237, 0.38);
+  color: var(--marrow);
+  font-size: 0.74rem;
 }
 
 button.share-button {
-  min-height: 40px;
-  height: 40px;
-  padding: 9px 12px;
+  min-height: 30px;
+  height: 30px;
+  padding: 5px 9px;
   line-height: 1;
 }
 
-.share-button::before {
-  content: "↪";
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI Symbol", sans-serif;
-  font-size: 1rem;
-  font-weight: 900;
-  line-height: 1;
+.share-icon {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .song-links-section {
@@ -878,7 +888,7 @@ button.share-button {
     flex-direction: column;
   }
 
-  .button,
+  .button:not(.share-button),
   .single-release-link {
     width: 100%;
   }

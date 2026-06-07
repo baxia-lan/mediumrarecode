@@ -356,21 +356,25 @@
     if (!button) {
       return;
     }
+    const label = button.querySelector(".share-label") || button;
+    const setLabel = (text) => {
+      label.textContent = text;
+    };
     button.addEventListener("click", () => {
       if (!navigator.clipboard) {
-        button.textContent = "未复制";
+        setLabel("未复制");
         return;
       }
       navigator.clipboard
         .writeText(share)
         .then(() => {
-          button.textContent = "已复制";
+          setLabel("已复制");
           window.setTimeout(() => {
-            button.textContent = defaultText;
+            setLabel(defaultText);
           }, 1600);
         })
         .catch(() => {
-          button.textContent = "未复制";
+          setLabel("未复制");
         });
     });
   }
